@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Probs
 {
-    class ProbabilityGenerator
+    public class ProbabilityGenerator
     {
         readonly CachedRollsGenerator _rollsGenerator;
 
