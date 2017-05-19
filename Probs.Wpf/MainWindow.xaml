@@ -8,9 +8,42 @@
         mc:Ignorable="d"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
         Title="MainWindow" 
+        Background="#000"
         Height="350" 
         Width="525">
+    <Window.Resources>
+        <ResourceDictionary>
+            <local:MyLegend x:Key="leg">
+                
+            </local:MyLegend>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
-        <lvc:CartesianChart Series="{Binding Series}" />
+        <lvc:CartesianChart Series="{Binding Series}" 
+                            LegendLocation="Right"
+                            ChartLegend="{StaticResource leg}"
+                            >
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="Success Probability" 
+                          LabelFormatter="{Binding YFormatter}" 
+                          MinValue="0" 
+                          MaxValue="1.05" 
+                          Foreground="#eee">
+                    <lvc:Axis.Separator>
+                        <lvc:Separator StrokeThickness="1" Stroke="#8EFFFFFF" StrokeDashArray="8" Step="0.25"/>
+                    </lvc:Axis.Separator>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="TN" 
+                          Labels="{Binding Labels}"
+                          Foreground="#eee"
+                          >
+                    <lvc:Axis.Separator>
+                        <lvc:Separator StrokeThickness="1" Stroke="#8Eaaaaaa" Step="1"/>
+                    </lvc:Axis.Separator>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisX>
+        </lvc:CartesianChart>
     </Grid>
 </Window>

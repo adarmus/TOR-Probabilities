@@ -1,9 +1,8 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probs", "Probs\Probs.csproj", "{4A0AA3E6-14BA-4BE3-A459-B1B00D5E2AF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Probs", "Probs\Probs.csproj", "{4A0AA3E6-14BA-4BE3-A459-B1B00D5E2AF2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probs.Wpf", "Probs.Wpf\Probs.Wpf.csproj", "{C962FDC6-779D-4966-8B94-B43DE48A09C3}"
 EndProject
